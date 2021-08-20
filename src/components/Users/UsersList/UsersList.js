@@ -1,4 +1,3 @@
-import { classes } from 'istanbul-lib-coverage';
 import React from 'react';
 import { Card } from '../../UI/Card/Card';
 
@@ -10,7 +9,7 @@ export const UsersList = (props) => {
       <ul>
         {props.users.map((user) => {
           return (
-            <li>
+            <li key={user.id}>
               {user.name} ({user.age} years old)
             </li>
           );
